@@ -46,7 +46,7 @@ header.cabecera_principal > .hero {
 }
 
 header.cabecera_principal {
-    overflow: hidden;
+    /*overflow: hidden;*/
     border-radius: 1rem;
     background-color: rgb(171, 171, 171);
 }
@@ -226,3 +226,47 @@ body > footer {
     width: auto;
     max-height: 150px;
 }
+
+
+
+/* Añadidura de estilos a formularios */
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+
+.formulario {
+    flex-direction: column;
+}
+
+
+.formulario input, .formulario select, .formulario button, .formulario label {
+    margin: 0 auto;
+}
+
+.formulario .campo_form {
+    width: 400px;
+    height: 30px;
+}
+
+.formulario label {
+    margin-left: 480px;
+    margin-top: 20px;
+}
+
+.formulario button {
+    background-color: rgb(15, 63, 63);
+    margin-top: 30px;
+    color: white;
+    width: 300px;
+    height: 30px;
+}
+
+.formulario button:hover {
+    margin-bottom: 10px;
+    background:green;
+    cursor: pointer;
+    
+}
+

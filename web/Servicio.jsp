@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Servicios - Caninos y Felinos</title>
   </head>
   <body>
     <header class="cabecera_principal">
-      <section class="hero">
+      <!--Baner principal-->
+      <%@include file="banner_principal.jsp" %>
+      <!--<section class="hero">
         <a href="/">
             <section>
               <h1>
@@ -25,8 +27,10 @@
               alt="gato"
             />
         </section>
-      </section>
-      <section class="contenedor_navegacion">
+      </section>-->
+      <!--Comentar para solo incluir una sola linea en todos los html-->
+      <%@include file="barra_navegacion.jsp" %>
+      <!--<section class="contenedor_navegacion">
         <nav>
             <ul>
                 <a href="/Servicio.html"><li>Servicios</li></a>
@@ -35,7 +39,7 @@
                 <a href="/Promociones.html"><li>Promociones</li></a>
               </ul>
         </nav>
-      </section>
+      </section>-->
     </header>
     <main id="contenido_principal">
         <section class="pagina">
