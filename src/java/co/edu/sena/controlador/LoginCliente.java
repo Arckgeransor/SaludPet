@@ -7,8 +7,6 @@ package co.edu.sena.controlador;
 import co.edu.sena.conexion.Conexion;
 import co.edu.sena.modelo.Cliente;
 import co.edu.sena.modelo.PersonaCorporativa;
-import jakarta.servlet.RequestDispatcher;
-//import jakarta.resource.cci.ResultSet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -25,8 +23,8 @@ import java.util.logging.Logger;
  *
  * @author Lenovo
  */
-@WebServlet(name = "Login", urlPatterns = {"/Login"})
-public class Login extends HttpServlet {
+@WebServlet(name = "LoginCliente", urlPatterns = {"/LoginCliente"})
+public class LoginCliente extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,28 +39,28 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            PersonaCorporativa a = new PersonaCorporativa();
-            
-            int rolDefinido = Integer.parseInt(request.getParameter("rol_persona"));
+            Cliente a = new Cliente();
             
             
-            a.setCorreo(request.getParameter("correo"));
+            
+            
+            a.setCorreo_cliente(request.getParameter("correo"));
             a.setContrasena(request.getParameter("clave"));
-            a.setRol_persona(rolDefinido);
+            a.setRol_cliente(3);
             
             
             Conexion conexion = new Conexion();
             
             boolean isLogged = false;
             
-            System.out.println("El correo ingresado es de: " + a.getCorreo());
+            System.out.println("El correo ingresado es de: " + a.getCorreo_cliente());
             System.out.println("La clave ingresada es de: " + a.getContrasena());
-            System.out.println("El rol de la persona es de: " + a.getRol_persona());
+            System.out.println("El rol de la persona es de: " + a.getRol_cliente());
             
             //SQL para consultar si existe el usuario en la base de datos
-            String sql = "select * from personas_corporativas where correo = '"+a.getCorreo()+"'"
+            String sql = "select * from cliente where correo = '"+a.getCorreo_cliente()+"'"
                          + " and contrasena = md5('"+a.getContrasena()+"')"
-                         + " and rol_persona = '"+a.getRol_persona()+"' ";
+                         + " and rol_cliente = '"+a.getRol_cliente()+"' ";
             
             
             System.out.println("El sql es: " + sql);

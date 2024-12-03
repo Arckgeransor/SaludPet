@@ -21,6 +21,10 @@ public class Cliente {
     private String cliente_vip;     
     private int rol_cliente;     
     private int isLogged; 
+    private String contrasena;
+    private int telefono;
+    private String direccion;
+    
 
     public int getIdcliente() {
         return idcliente;
@@ -109,5 +113,34 @@ public class Cliente {
     public void setIsLogged(int isLogged) {
         this.isLogged = isLogged;
     }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
+    
+    
+    
+    
 
 }

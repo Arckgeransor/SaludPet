@@ -264,9 +264,7 @@ body > footer {
 }
 
 .formulario button:hover {
-    margin-bottom: 10px;
     background:green;
     cursor: pointer;
-    
 }
 

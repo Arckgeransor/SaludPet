@@ -15,11 +15,13 @@ public class PersonaCorporativa {
     private int doc_persona;
     private String correo;
     private String contrasena;
-    private String rol_persona;
+    private int rol_persona;
     private String especialidad_persona;
     private String doc_corporativo;
     private String estado_persona;
     private int isLogged;
+    private int telefono;
+    private String direccion;
 
     public int getIdpersona() {
         return idpersona;
@@ -69,11 +71,11 @@ public class PersonaCorporativa {
         this.contrasena = contrasena;
     }
 
-    public String getRol_persona() {
+    public int getRol_persona() {
         return rol_persona;
     }
 
-    public void setRol_persona(String rol_persona) {
+    public void setRol_persona(int rol_persona) {
         this.rol_persona = rol_persona;
     }
 
@@ -107,5 +109,22 @@ public class PersonaCorporativa {
 
     public void setIsLogged(int isLogged) {
         this.isLogged = isLogged;
-    }     
+    }    
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
 }
